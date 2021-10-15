@@ -1,7 +1,7 @@
 # 2nd-Year-mini-project:
 
 ## PASSWORD STRENGTH  ESTIMATOR  BASED ON CRACKING TIME
-![PSE](https://github.com/Gaya3priya/2nd-Year-mini-project/password_strength/images/PSECTlogo.jpg)
+![PSE](https://github.com/Gaya3priya/2nd-Year-mini-project/blob/main/password_strength/images/PSECTlogo.jpg)
 
 ## Description:
 
