@@ -1,0 +1,18 @@
+{% extends "strength_estimator/base.html" %}
+{% block content %}
+    {% if  renderdict %}
+        <table class="highlight bordered responsive-table">
+
+        <tbody>
+        {% for key,value in renderdict.items %}
+          <thead>
+           <tr>
+             <th>{{key}}</th><td>{{value}}</td>
+           </tr>
+          </thead>
+       {% endfor %}
+               </tbody>
+      </table>
+    {% endif %}
+{% endblock content%}
+

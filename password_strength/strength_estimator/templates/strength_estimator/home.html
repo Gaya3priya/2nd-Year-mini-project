@@ -1,0 +1,49 @@
+{% extends "strength_estimator/base.html" %}
+{% block content %}
+     <!-- <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+
+          </div>
+        </article> -->
+
+
+{% load static %}
+
+<body>
+    <div class="container my-3">
+      <h3></h3>
+      <form method="post" action="index">
+        {% csrf_token %}
+        <div class="form-group">
+             <h3></h3>
+             <label for="num"><h1 style="color: black;">Check your password Strength...</h1> </label>
+             <h1></h1>
+             <input style="font-size:1.3vw;" type="password" class="form-control" id="name" name='name' placeholder="Enter your password">
+             &nbsp;
+        </div>
+
+      <button style="font-size:1.5vw;" type="Submit" class="btn btn-success"onclick="$('#loading').show();">Submit</button>
+
+      </form>
+      <div id="loading" style="display:none;padding-top: 20px;"><img src="{% static 'strength_estimator/submit.gif' %}" width="900" height="300" alt="" /></div>
+
+    </div>
+
+</body>
+    {% if  renderdict %}
+        <table class="highlight bordered responsive-table">
+
+        <tbody>
+        {% for key,value in renderdict.items %}
+          <thead>
+           <tr>
+             <th style="font-size:1.5vw;">{{key}}</th><td style="font-size:1.5vw; color: white;">{{value}}</td>
+             &nbsp;
+           </tr>
+          </thead>
+       {% endfor %}
+               </tbody>
+      </table>
+    {% endif %}
+{% endblock content%}
